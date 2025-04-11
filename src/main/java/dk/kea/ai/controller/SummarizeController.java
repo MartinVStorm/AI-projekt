@@ -1,7 +1,6 @@
 package dk.kea.ai.controller;
 
 import dk.kea.ai.service.AiService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -11,8 +10,11 @@ import java.util.Map;
 @RequestMapping("/api")
 public class SummarizeController {
 
-    @Autowired
-    private AiService aiService;
+    private final AiService aiService;
+
+    public SummarizeController(AiService aiService) {
+        this.aiService = aiService;
+    }
 
     @PostMapping("/summarize")
     public Map<String, String> summarize(@RequestBody Map<String, String> request) {
