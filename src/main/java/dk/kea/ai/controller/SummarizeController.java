@@ -1,6 +1,6 @@
-package controller;
+package dk.kea.ai.controller;
 
-import service.AiService;
+import dk.kea.ai.service.AiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
