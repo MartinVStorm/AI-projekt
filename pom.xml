@@ -46,6 +46,19 @@
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20240303</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-resolver-dns-native-macos</artifactId>
+            <version>4.1.109.Final</version> <!-- Tjek for nyeste version -->
+            <classifier>osx-aarch_64</classifier> <!-- eller osx-x86_64 afhængigt af din Mac -->
+        </dependency>
+
     </dependencies>
 
     <build>

@@ -1,5 +1,6 @@
 package dk.kea.ai.controller;
 
+import dk.kea.ai.dto.SummaryResponseDTO;
 import dk.kea.ai.service.AiService;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,9 +18,9 @@ public class SummarizeController {
     }
 
     @PostMapping("/summarize")
-    public Map<String, String> summarize(@RequestBody Map<String, String> request) {
+    public SummaryResponseDTO summarize(@RequestBody Map<String, String> request) {
         String text = request.getOrDefault("text", "");
-        String summary = aiService.summarizeText(text);
-        return Map.of("summary", summary);
+        return aiService.summarizeText(text);
     }
+
 }
